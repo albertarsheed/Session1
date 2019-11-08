@@ -1,0 +1,19 @@
+import java.io.*;
+import java.util.HashMap;
+
+public class SimpleSearch 
+{
+   public static void main(String[] args) throws NumberFormatException, IOException
+      {
+	       BufferedReader sc=new BufferedReader(new InputStreamReader(System.in));
+	        int n=Integer.parseInt(sc.readLine().trim());
+	        String s[]=sc.readLine().split(" ");
+	        HashMap<Long,Long>hm=new HashMap();
+	          for(long i=0;i<n;i++)
+	          {
+	        	  hm.put(Long.parseLong(s[(int) i]), i);
+	          }
+	          long k=Long.parseLong(sc.readLine().trim());
+	        System.out.println(hm.get(k));
+      }
+}
