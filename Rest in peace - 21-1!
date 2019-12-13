@@ -1,0 +1,19 @@
+import java.util.regex.*;
+import java.util.*;
+public class HeightQuery {
+    public static void main(String args[] ) throws Exception {
+       
+        Scanner sc= new Scanner(System.in);
+        int n=sc.nextInt();
+        
+        while(n-->0){
+            int a=sc.nextInt();
+            Matcher m=Pattern.compile("21").matcher(String.valueOf(a));
+            if(m.find()||a%21==0)
+           System.out.println("The streak is broken!");
+            else
+            	System.out.println("The streak lives still in our heart!");
+        }
+
+    }
+}
